@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from sales.views import index_view, prepare_view
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', index_view),
+    url(r'^prepareBuy/(?P<id>[0-9]+)/$', prepare_view),
+    # url(r'^ByCompleted/', index_view),
 ]

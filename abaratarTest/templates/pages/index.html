@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for x in products %}
+<div>
+  <p>
+    {{ x.name }} </br>
+    <span>
+      cantidad: {{ x.stock }}
+    </span>
+    <a href="prepareBuy/{{x.id}}">
+      Comprar
+    </a>
+  </p>
+</div>
+{% endfor %}
+
+{% endblock %}
+
+
+{% block javascript %}
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+{% endblock %}
+
